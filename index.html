@@ -36,9 +36,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:10px 20px;backgroun
 .ht span{color:var(--gold);text-shadow:0 0 30px rgba(245,197,24,.4)}
 .htg{font-family:var(--px);font-size:clamp(8px,1.5vw,11px);color:var(--red);letter-spacing:6px;margin-bottom:28px;animation:tb 3s infinite}
 @keyframes tb{0%,90%,100%{opacity:1}95%{opacity:.2}}
-.hd{font-size:clamp(14px,2vw,18px);color:var(--mt);margin-bottom:36px;font-weight:300;letter-spacing:1px;line-height:1.6}
+.hd{font-size:clamp(14px,2vw,18px);color:#e0dce5;margin-bottom:36px;font-weight:400;letter-spacing:1px;line-height:1.6}
 .hb{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{padding:14px 28px;border:none;font-family:var(--hd);font-size:11px;font-weight:700;cursor:pointer;text-decoration:none;text-transform:uppercase;letter-spacing:3px;transition:all .25s;display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden}
+.btn{padding:14px 28px;border:none;font-family:var(--hd);font-size:11px;font-weight:700;cursor:pointer;text-decoration:none;text-transform:uppercase;letter-spacing:3px;transition:all .25s;display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden;border-radius:8px}
 .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transition:left .5s}
 .btn:hover::before{left:100%}
 .bg{background:var(--gold);color:#000}.bg:hover{box-shadow:0 0 30px rgba(245,197,24,.4);transform:translateY(-2px)}
@@ -49,23 +49,24 @@ section{padding:80px 20px;position:relative}
 .st{font-family:var(--px);font-size:8px;color:var(--red);letter-spacing:5px;margin-bottom:10px}
 .sh{font-family:var(--hd);font-size:clamp(28px,5vw,46px);letter-spacing:4px;margin-bottom:14px;font-weight:800}
 .sh span{color:var(--gold)}
-.sd{color:var(--mt);font-size:16px;max-width:600px;line-height:1.7;font-weight:300}
+.sd{color:#c8c4ce;font-size:16px;max-width:600px;line-height:1.7;font-weight:400}
 .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:40px}
-.fi{background:var(--sf);border:1px solid rgba(245,197,24,.05);padding:26px 20px;transition:all .4s;position:relative;overflow:hidden}
-.fi::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--red);transition:height .4s}
-.fi:hover::before{height:100%}.fi:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 14px 50px rgba(245,197,24,.06)}
+.fi{background:rgba(255,255,255,.03);backdrop-filter:blur(10px);border:1px solid rgba(245,197,24,.08);padding:26px 20px;transition:all .4s;position:relative;overflow:hidden;border-radius:12px}
+.fi::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--red);transition:height .4s;border-radius:2px}
+.fi:hover::before{height:100%}.fi:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 14px 50px rgba(245,197,24,.08),inset 0 0 30px rgba(245,197,24,.02)}
 .fi-i{font-size:30px;margin-bottom:12px}
 .fi-t{font-family:var(--hd);font-size:13px;color:var(--gold);letter-spacing:3px;margin-bottom:6px;font-weight:700}
-.fi-d{color:var(--mt);font-size:13px;line-height:1.6}
+.fi-d{color:#c8c4ce;font-size:13px;line-height:1.6}
 #catalogo{background:var(--bg2)}
 .cf{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0 20px}
-.cb{padding:8px 18px;background:transparent;border:1px solid var(--mt);color:var(--mt);font-family:var(--hd);font-size:10px;font-weight:600;cursor:pointer;letter-spacing:2px;transition:all .2s}
-.cb.ac,.cb:hover{background:var(--gold);color:#000;border-color:var(--gold)}
+.cb{padding:8px 18px;background:transparent;border:1px solid rgba(255,255,255,.15);color:#bbb;font-family:var(--hd);font-size:10px;font-weight:600;cursor:pointer;letter-spacing:2px;transition:all .2s;border-radius:20px}
+.cb.ac,.cb:hover{background:var(--gold);color:#000;border-color:var(--gold);box-shadow:0 0 15px rgba(245,197,24,.2)}
 .cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-.pc{background:var(--sf);border:1px solid rgba(245,197,24,.04);overflow:hidden;transition:all .4s;position:relative}
-.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transition:transform .4s}
-.pc:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 12px 50px rgba(245,197,24,.08)}.pc:hover::after{transform:scaleX(1)}
+.pc{background:rgba(255,255,255,.02);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.06);overflow:hidden;transition:all .4s;position:relative;border-radius:12px}
+.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));transform:scaleX(0);transition:transform .4s}
+.pc:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 12px 50px rgba(245,197,24,.1),0 0 0 1px rgba(245,197,24,.1)}.pc:hover::after{transform:scaleX(1)}
 .pc-img{height:180px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--sf2),#1a1020);display:flex;align-items:center;justify-content:center;font-size:64px}
+.pc-logo{width:80px;height:80px;opacity:.9;filter:drop-shadow(0 0 10px rgba(255,255,255,.2))}
 .pc-badge{position:absolute;top:10px;left:10px;padding:4px 10px;font-family:var(--hd);font-size:9px;font-weight:700;letter-spacing:2px;z-index:3}
 .bn{background:var(--gold);color:#000}.bu{background:#00d4ff;color:#000}
 .pc-info{padding:16px}
@@ -73,43 +74,48 @@ section{padding:80px 20px;position:relative}
 .pc-plat{font-size:11px;color:var(--mt);letter-spacing:2px;margin-bottom:8px;text-transform:uppercase}
 .pc-price{font-family:var(--hd);font-size:24px;color:var(--gold);font-weight:800}
 .pc-st{font-size:11px;margin-top:4px;font-weight:600}
-.pc-btn{margin-top:10px;width:100%;padding:10px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:var(--hd);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:3px;transition:all .2s}
-.pc-btn:hover{background:var(--red);color:#fff;box-shadow:0 0 20px var(--rg)}
+.pc-btn{margin-top:10px;width:100%;padding:10px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:var(--hd);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:3px;transition:all .2s;border-radius:6px}
+.pc-btn:hover{background:var(--red);color:#fff;box-shadow:0 0 20px var(--rg);transform:translateY(-1px)}
 .ssg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:40px}
-.ss{background:var(--sf);border:1px solid rgba(245,197,24,.04);padding:24px;transition:all .4s}
-.ss:hover{border-color:var(--gold);box-shadow:0 0 30px rgba(180,0,255,.08)}
+.ss{background:rgba(255,255,255,.02);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.06);padding:24px;transition:all .4s;border-radius:12px;position:relative;overflow:hidden}
+.ss:hover{border-color:var(--gold);box-shadow:0 0 30px rgba(180,0,255,.08),0 0 0 1px rgba(245,197,24,.1);transform:translateY(-4px)}
 .ss-i{font-size:34px;margin-bottom:10px}
 .ss-t{font-family:var(--hd);font-size:13px;color:var(--wh);letter-spacing:2px;margin-bottom:4px;font-weight:700}
 .ss-p{color:var(--gold);font-family:var(--hd);font-size:15px;margin-bottom:6px;font-weight:600}
-.ss-d{color:var(--mt);font-size:13px;line-height:1.5}
+.ss-d{color:#c0bcc5;font-size:13px;line-height:1.5}
 .ag{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;align-items:center}
 .at h3{font-family:var(--hd);font-size:20px;color:var(--gold);letter-spacing:3px;margin-bottom:14px;font-weight:700}
-.at p{color:var(--mt);line-height:1.8;margin-bottom:10px;font-size:15px}
+.at p{color:#c8c4ce;line-height:1.8;margin-bottom:10px;font-size:15px}
 .as{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-.asi{text-align:center;padding:16px;background:var(--sf);border:1px solid rgba(245,197,24,.06)}
+.asi{text-align:center;padding:18px;background:rgba(255,255,255,.03);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.08);border-radius:10px;transition:all .3s}
+.asi:hover{border-color:var(--gold);transform:translateY(-3px)}
 .asn{font-family:var(--hd);font-size:28px;color:var(--gold);font-weight:800}
 .asl{font-size:11px;color:var(--mt);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
-.fq{background:var(--sf);border:1px solid rgba(245,197,24,.06);margin-bottom:8px;overflow:hidden;cursor:pointer;transition:all .3s}
-.fq:hover{border-color:rgba(245,197,24,.15)}.fq.op{border-color:var(--gold)}
-.fq-q{padding:16px 18px;font-family:var(--hd);font-size:14px;letter-spacing:1px;display:flex;justify-content:space-between;align-items:center}
-.fq-a{color:var(--mt);font-size:14px;line-height:1.7;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;padding:0 18px}
+.fq{background:rgba(255,255,255,.03);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.08);margin-bottom:10px;overflow:hidden;cursor:pointer;transition:all .3s;border-radius:10px}
+.fq:hover{border-color:rgba(245,197,24,.2);background:rgba(255,255,255,.05)}.fq.op{border-color:var(--gold);background:rgba(245,197,24,.04)}
+.fq-q{padding:16px 18px;font-family:var(--hd);font-size:14px;letter-spacing:1px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.fq-a{color:#d0ccd5;font-size:14px;line-height:1.7;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;padding:0 18px}
 .fq.op .fq-a{max-height:300px;padding:0 18px 16px}
 .fq-arr{color:var(--gold);font-size:12px;transition:transform .3s}.fq.op .fq-arr{transform:rotate(180deg)}
 .blg{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:40px}
-.bl{background:var(--sf);border:1px solid rgba(245,197,24,.04);overflow:hidden;transition:all .3s}
-.bl:hover{border-color:var(--gold);transform:translateY(-4px)}
-.bl-img{height:150px;background:var(--sf2);display:flex;align-items:center;justify-content:center;font-size:48px}
+.bl{background:rgba(255,255,255,.02);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.06);overflow:hidden;transition:all .3s;cursor:pointer;border-radius:12px}
+.bl:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 10px 40px rgba(245,197,24,.08)}
+.bl-img{height:150px;background:linear-gradient(135deg,var(--sf2),#1a1020);display:flex;align-items:center;justify-content:center;font-size:48px}
 .bl-b{padding:16px}
 .bl-tag{font-size:10px;color:var(--ng);text-transform:uppercase;letter-spacing:2px;font-weight:700}
-.bl-t{font-family:var(--hd);font-size:16px;letter-spacing:1px;margin:6px 0;font-weight:600}
-.bl-e{color:var(--mt);font-size:13px;line-height:1.6}
+.bl-t{font-family:var(--hd);font-size:16px;letter-spacing:1px;margin:6px 0;font-weight:600;color:#fff}
+.bl-e{color:#c0bcc5;font-size:13px;line-height:1.6}
+.bl-full{color:#d0ccd5;font-size:14px;line-height:1.8;max-height:0;overflow:hidden;transition:max-height .5s;margin-top:0}
+.bl.open .bl-full{max-height:500px;margin-top:12px}
 .bl-d{font-size:11px;color:var(--mt);margin-top:8px}
+.bl-more{color:var(--gold);font-size:12px;font-weight:600;margin-top:8px;display:block}
 .cog{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
 .coi{display:flex;flex-direction:column;gap:14px}
-.ci{display:flex;align-items:flex-start;gap:12px;padding:14px;background:var(--sf);border:1px solid rgba(245,197,24,.04)}
+.ci{display:flex;align-items:flex-start;gap:12px;padding:14px;background:rgba(255,255,255,.03);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.06);border-radius:10px;transition:all .3s}
+.ci:hover{border-color:rgba(245,197,24,.15);background:rgba(255,255,255,.05)}
 .ci-i{font-size:22px;flex-shrink:0}
 .ci-l{font-size:10px;color:var(--mt);text-transform:uppercase;letter-spacing:2px;margin-bottom:3px}
-.ci-v{font-size:14px;font-weight:600}.ci-v a{color:var(--gold);text-decoration:none}
+.ci-v{font-size:14px;font-weight:600;color:#ddd}.ci-v a{color:var(--gold);text-decoration:none}
 .com{overflow:hidden;border:1px solid var(--gd2);min-height:350px}
 .com iframe{width:100%;height:100%;min-height:350px;border:0;filter:invert(90%) hue-rotate(180deg) brightness(.8) contrast(1.2)}
 footer{background:var(--sf);border-top:2px solid var(--gold);padding:36px 20px;text-align:center}
@@ -177,21 +183,21 @@ footer{background:var(--sf);border-top:2px solid var(--gold);padding:36px 20px;t
 <button class="cb" onclick="fC('ct',this)">Controles</button>
 </div>
 <div class="cg" id="catG">
-<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bn">NUEVA</span>🎮</div><div class="pc-info"><div class="pc-name">PS5 Slim Nueva Disco</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$2.400.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS5 Slim Nueva Disco','2.400.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bn">NUEVA</span>🎮</div><div class="pc-info"><div class="pc-name">PS5 Slim Nueva Digital</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$2.200.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS5 Slim Nueva Digital','2.200.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span>🎮</div><div class="pc-info"><div class="pc-name">PS5 Slim Usada Disco</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$1.880.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS5 Slim Usada Disco','1.880.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span>🎮</div><div class="pc-info"><div class="pc-name">PS4 Slim Usada</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$800.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS4 Slim Usada','800.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span>🎮</div><div class="pc-info"><div class="pc-name">PS4 Pro Usada</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$950.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS4 Pro Usada','950.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span>🎮</div><div class="pc-info"><div class="pc-name">PS3 Super Slim</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$450.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS3 Super Slim','450.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="xb"><div class="pc-img"><span class="pc-badge bu">USADA</span>🟢</div><div class="pc-info"><div class="pc-name">Xbox Series X</div><div class="pc-plat">XBOX</div><div class="pc-price">$2.100.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Xbox Series X','2.100.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="xb"><div class="pc-img"><span class="pc-badge bu">USADA</span>🟢</div><div class="pc-info"><div class="pc-name">Xbox Series S</div><div class="pc-plat">XBOX</div><div class="pc-price">$1.150.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Xbox Series S','1.150.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="xb"><div class="pc-img"><span class="pc-badge bu">USADA</span>🟢</div><div class="pc-info"><div class="pc-name">Xbox Series S 1TB</div><div class="pc-plat">XBOX</div><div class="pc-price">$1.550.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Xbox Series S 1TB','1.550.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="sw"><div class="pc-img"><span class="pc-badge bu">USADA</span>🔴</div><div class="pc-info"><div class="pc-name">Nintendo Switch OLED</div><div class="pc-plat">NINTENDO</div><div class="pc-price">$980.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Nintendo Switch OLED','980.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="sw"><div class="pc-img"><span class="pc-badge bu">USADA</span>🔴</div><div class="pc-info"><div class="pc-name">Nintendo Switch 1</div><div class="pc-plat">NINTENDO</div><div class="pc-price">$750.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Nintendo Switch 1','750.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bn">NUEVO</span>🕹️</div><div class="pc-info"><div class="pc-name">Control PS5 Nuevo</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$290.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Control PS5 Nuevo','290.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bu">USADO</span>🕹️</div><div class="pc-info"><div class="pc-name">Control PS4 Original</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$130.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Control PS4 Original','130.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bn">NUEVO</span>🕹️</div><div class="pc-info"><div class="pc-name">Control Xbox One</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$250.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Control Xbox One','250.000')">💬 COTIZAR</button></div></div>
-<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bn">NUEVO</span>🕹️</div><div class="pc-info"><div class="pc-name">Joycon Nintendo</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$140.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Joycon Nintendo','140.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bn">NUEVA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><text x="50" y="50" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="white">PS</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0070d1">PLAYSTATION</text></svg></div><div class="pc-info"><div class="pc-name">PS5 Slim Nueva Disco</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$2.400.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS5 Slim Nueva Disco','2.400.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bn">NUEVA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><text x="50" y="50" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="white">PS</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0070d1">PLAYSTATION</text></svg></div><div class="pc-info"><div class="pc-name">PS5 Slim Nueva Digital</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$2.200.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS5 Slim Nueva Digital','2.200.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><text x="50" y="50" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="white">PS</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0070d1">PLAYSTATION</text></svg></div><div class="pc-info"><div class="pc-name">PS5 Slim Usada Disco</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$1.880.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS5 Slim Usada Disco','1.880.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><text x="50" y="50" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="white">PS</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0070d1">PLAYSTATION</text></svg></div><div class="pc-info"><div class="pc-name">PS4 Slim Usada</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$800.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS4 Slim Usada','800.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><text x="50" y="50" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="white">PS</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0070d1">PLAYSTATION</text></svg></div><div class="pc-info"><div class="pc-name">PS4 Pro Usada</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$950.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS4 Pro Usada','950.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ps"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><text x="50" y="50" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="white">PS</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0070d1">PLAYSTATION</text></svg></div><div class="pc-info"><div class="pc-name">PS3 Super Slim</div><div class="pc-plat">PLAYSTATION</div><div class="pc-price">$450.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('PS3 Super Slim','450.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="xb"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="35" r="25" fill="none" stroke="#0e7a0d" stroke-width="4"/><text x="50" y="42" text-anchor="middle" font-family="Arial" font-weight="900" font-size="16" fill="#0e7a0d">XBOX</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0e7a0d">SERIES</text></svg></div><div class="pc-info"><div class="pc-name">Xbox Series X</div><div class="pc-plat">XBOX</div><div class="pc-price">$2.100.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Xbox Series X','2.100.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="xb"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="35" r="25" fill="none" stroke="#0e7a0d" stroke-width="4"/><text x="50" y="42" text-anchor="middle" font-family="Arial" font-weight="900" font-size="16" fill="#0e7a0d">XBOX</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0e7a0d">SERIES</text></svg></div><div class="pc-info"><div class="pc-name">Xbox Series S</div><div class="pc-plat">XBOX</div><div class="pc-price">$1.150.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Xbox Series S','1.150.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="xb"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="35" r="25" fill="none" stroke="#0e7a0d" stroke-width="4"/><text x="50" y="42" text-anchor="middle" font-family="Arial" font-weight="900" font-size="16" fill="#0e7a0d">XBOX</text><text x="50" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#0e7a0d">SERIES</text></svg></div><div class="pc-info"><div class="pc-name">Xbox Series S 1TB</div><div class="pc-plat">XBOX</div><div class="pc-price">$1.550.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Xbox Series S 1TB','1.550.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="sw"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="10" width="30" height="50" rx="8" fill="none" stroke="#e60012" stroke-width="3"/><rect x="55" y="10" width="30" height="50" rx="8" fill="none" stroke="#00a2e8" stroke-width="3"/><circle cx="30" cy="28" r="5" fill="#e60012"/><circle cx="70" cy="42" r="5" fill="#00a2e8"/><text x="50" y="75" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="#e60012">NINTENDO</text></svg></div><div class="pc-info"><div class="pc-name">Nintendo Switch OLED</div><div class="pc-plat">NINTENDO</div><div class="pc-price">$980.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Nintendo Switch OLED','980.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="sw"><div class="pc-img"><span class="pc-badge bu">USADA</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="10" width="30" height="50" rx="8" fill="none" stroke="#e60012" stroke-width="3"/><rect x="55" y="10" width="30" height="50" rx="8" fill="none" stroke="#00a2e8" stroke-width="3"/><circle cx="30" cy="28" r="5" fill="#e60012"/><circle cx="70" cy="42" r="5" fill="#00a2e8"/><text x="50" y="75" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="#e60012">NINTENDO</text></svg></div><div class="pc-info"><div class="pc-name">Nintendo Switch 1</div><div class="pc-plat">NINTENDO</div><div class="pc-price">$750.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Nintendo Switch 1','750.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bn">NUEVO</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="35" rx="35" ry="20" fill="none" stroke="white" stroke-width="2.5"/><circle cx="38" cy="30" r="3" fill="white"/><circle cx="62" cy="30" r="3" fill="white"/><circle cx="56" cy="24" r="3" fill="#39ff14"/><circle cx="68" cy="30" r="3" fill="#ff1744"/><circle cx="62" cy="36" r="3" fill="#0070d1"/><circle cx="56" cy="36" r="3" fill="#f5c518"/><rect x="32" y="24" width="3" height="12" rx="1" fill="white"/><rect x="27" y="29" width="13" height="3" rx="1" fill="white"/><text x="50" y="72" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="white">CONTROL</text></svg></div><div class="pc-info"><div class="pc-name">Control PS5 Nuevo</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$290.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Control PS5 Nuevo','290.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bu">USADO</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="35" rx="35" ry="20" fill="none" stroke="white" stroke-width="2.5"/><circle cx="38" cy="30" r="3" fill="white"/><circle cx="62" cy="30" r="3" fill="white"/><circle cx="56" cy="24" r="3" fill="#39ff14"/><circle cx="68" cy="30" r="3" fill="#ff1744"/><circle cx="62" cy="36" r="3" fill="#0070d1"/><circle cx="56" cy="36" r="3" fill="#f5c518"/><rect x="32" y="24" width="3" height="12" rx="1" fill="white"/><rect x="27" y="29" width="13" height="3" rx="1" fill="white"/><text x="50" y="72" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="white">CONTROL</text></svg></div><div class="pc-info"><div class="pc-name">Control PS4 Original</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$130.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Control PS4 Original','130.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bn">NUEVO</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="35" rx="35" ry="20" fill="none" stroke="white" stroke-width="2.5"/><circle cx="38" cy="30" r="3" fill="white"/><circle cx="62" cy="30" r="3" fill="white"/><circle cx="56" cy="24" r="3" fill="#39ff14"/><circle cx="68" cy="30" r="3" fill="#ff1744"/><circle cx="62" cy="36" r="3" fill="#0070d1"/><circle cx="56" cy="36" r="3" fill="#f5c518"/><rect x="32" y="24" width="3" height="12" rx="1" fill="white"/><rect x="27" y="29" width="13" height="3" rx="1" fill="white"/><text x="50" y="72" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="white">CONTROL</text></svg></div><div class="pc-info"><div class="pc-name">Control Xbox One</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$250.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Control Xbox One','250.000')">💬 COTIZAR</button></div></div>
+<div class="pc rv" data-cat="ct"><div class="pc-img"><span class="pc-badge bn">NUEVO</span><svg class="pc-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="35" rx="35" ry="20" fill="none" stroke="white" stroke-width="2.5"/><circle cx="38" cy="30" r="3" fill="white"/><circle cx="62" cy="30" r="3" fill="white"/><circle cx="56" cy="24" r="3" fill="#39ff14"/><circle cx="68" cy="30" r="3" fill="#ff1744"/><circle cx="62" cy="36" r="3" fill="#0070d1"/><circle cx="56" cy="36" r="3" fill="#f5c518"/><rect x="32" y="24" width="3" height="12" rx="1" fill="white"/><rect x="27" y="29" width="13" height="3" rx="1" fill="white"/><text x="50" y="72" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="white">CONTROL</text></svg></div><div class="pc-info"><div class="pc-name">Joycon Nintendo</div><div class="pc-plat">CONTROLES</div><div class="pc-price">$140.000</div><div class="pc-st" style="color:var(--ng)">● Disponible</div><button class="pc-btn" onclick="cot('Joycon Nintendo','140.000')">💬 COTIZAR</button></div></div>
 </div></div></section>
 
 <section id="servicios" style="background:var(--bg)"><div class="ct">
@@ -226,12 +232,31 @@ footer{background:var(--sf);border-top:2px solid var(--gold);padding:36px 20px;t
 </div></div></div></div></section>
 
 <section id="blog"><div class="ct">
-<div class="st rv">// NOTICIAS</div><div class="sh rv"><span>BLOG</span> GAMER</div>
-<div class="blg">
-<div class="bl rv"><div class="bl-img">🎮</div><div class="bl-b"><div class="bl-tag" style="color:var(--ng)">Lanzamiento</div><div class="bl-t">Nintendo Switch 2</div><div class="bl-e">Nueva generación con pantalla OLED más grande.</div><div class="bl-d">📅 Abril 2026</div></div></div>
-<div class="bl rv"><div class="bl-img">🕹️</div><div class="bl-b"><div class="bl-tag" style="color:var(--ng)">Tips</div><div class="bl-t">Cómo cuidar tu control PS5</div><div class="bl-e">5 consejos para evitar el drift.</div><div class="bl-d">📅 Abril 2026</div></div></div>
-<div class="bl rv"><div class="bl-img">🔧</div><div class="bl-b"><div class="bl-tag" style="color:var(--ng)">Servicios</div><div class="bl-t">¿Tu PS4 se apaga sola?</div><div class="bl-e">Causas comunes y soluciones.</div><div class="bl-d">📅 Abril 2026</div></div></div>
-</div></div></section>
+<div class="st rv">// NOTICIAS EN VIVO</div><div class="sh rv"><span>BLOG</span> GAMER</div>
+<div class="sd rv">Últimas noticias del mundo gaming actualizadas automáticamente.</div>
+<div class="cf rv" style="margin-bottom:20px">
+<button class="cb ac" onclick="loadNews('all',this)">Todas</button>
+<button class="cb" onclick="loadNews('ps',this)">PlayStation</button>
+<button class="cb" onclick="loadNews('xbox',this)">Xbox</button>
+<button class="cb" onclick="loadNews('nintendo',this)">Nintendo</button>
+<button class="cb" onclick="loadNews('pc',this)">PC</button>
+</div>
+<div class="blg" id="newsGrid">
+<div class="bl rv"><div class="bl-img">⏳</div><div class="bl-b"><div class="bl-t">Cargando noticias...</div></div></div>
+</div>
+<div style="text-align:center;margin-top:30px">
+<button class="btn bo" onclick="loadMoreNews()" id="loadMoreBtn" style="display:none;border-radius:8px">► CARGAR MÁS NOTICIAS</button>
+</div>
+
+<div style="margin-top:50px">
+<div class="sh rv" style="font-size:28px">TIPS <span>GAMER</span></div>
+<div class="blg" style="margin-top:20px">
+<div class="bl rv" onclick="this.classList.toggle('open')"><div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f)">🕹️</div><div class="bl-b"><div class="bl-tag" style="color:var(--ng)">Tips</div><div class="bl-t">Cómo cuidar tu control PS5 DualSense</div><div class="bl-e">5 consejos para evitar el drift.</div><div class="bl-full">1. No presiones los joysticks con fuerza excesiva al jugar. 2. Limpia los joysticks con alcohol isopropílico cada mes. 3. Guarda el control en un lugar seco y libre de polvo. 4. No comas ni tomes líquidos mientras juegas. 5. Si notas drift, tráelo a El Padrino — lo arreglamos desde $50.000 con garantía.</div><span class="bl-more">► Leer más</span></div></div>
+<div class="bl rv" onclick="this.classList.toggle('open')"><div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f)">🔧</div><div class="bl-b"><div class="bl-tag" style="color:var(--ng)">Servicios</div><div class="bl-t">¿Tu PS4 se apaga sola? Esto puede ser</div><div class="bl-e">Causas comunes y soluciones.</div><div class="bl-full">Las causas más comunes son: sobrecalentamiento por falta de mantenimiento, pasta térmica seca, ventilador obstruido, o fuente de poder dañada. La solución más efectiva es un mantenimiento completo: limpieza profunda, cambio de pasta térmica y revisión del ventilador. En El Padrino lo hacemos desde $120.000.</div><span class="bl-more">► Leer más</span></div></div>
+<div class="bl rv" onclick="this.classList.toggle('open')"><div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f)">💰</div><div class="bl-b"><div class="bl-tag" style="color:var(--ng)">Guía</div><div class="bl-t">¿PS5 Disco o Digital? Cuál te conviene</div><div class="bl-e">Ventajas y desventajas de cada versión.</div><div class="bl-full">PS5 Disco: puedes comprar juegos físicos más baratos de segunda mano, ver Blu-ray, y revender juegos. PS5 Digital: más barata, más delgada, pero dependes 100% de la tienda digital de Sony donde los juegos suelen ser más caros. Si compras juegos usados, la versión Disco te ahorra dinero a largo plazo. En El Padrino tenemos ambas versiones disponibles.</div><span class="bl-more">► Leer más</span></div></div>
+</div>
+</div>
+</div></section>
 
 <section id="faq" style="background:var(--bg2)"><div class="ct">
 <div class="st rv">// DUDAS</div><div class="sh rv">PREGUNTAS <span>FRECUENTES</span></div>
@@ -255,7 +280,15 @@ footer{background:var(--sf);border-top:2px solid var(--gold);padding:36px 20px;t
 <div class="ci"><div class="ci-i">📸</div><div><div class="ci-l">Instagram</div><div class="ci-v"><a href="https://instagram.com/videotiendaelpadrino" target="_blank">@videotiendaelpadrino →</a></div></div></div>
 <a href="https://wa.me/573015131733?text=Hola%20Padrino%20Gamer!" target="_blank" class="btn br" style="width:100%;justify-content:center;margin-top:8px">💬 ESCRÍBENOS</a>
 </div>
-<div class="com rv"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5!2d-76.537!3d3.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM!5e0!3m2!1ses!2sco!4v1" loading="lazy"></iframe></div>
+<div class="com rv" style="display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.03);backdrop-filter:blur(8px);border:1px solid rgba(245,197,24,.08);border-radius:12px;padding:40px 20px;text-align:center;min-height:350px">
+<div style="font-size:60px;margin-bottom:16px">📍</div>
+<div style="font-family:var(--hd);font-size:18px;color:var(--gold);letter-spacing:3px;margin-bottom:8px">ENCUÉNTRANOS</div>
+<div style="color:#c8c4ce;font-size:14px;margin-bottom:6px">C.C. Sanandresito del Sur</div>
+<div style="color:#c8c4ce;font-size:14px;margin-bottom:6px">Cra 80 #11a-51, Local 1-96</div>
+<div style="color:#c8c4ce;font-size:14px;margin-bottom:20px">Cali, Valle del Cauca</div>
+<a href="https://maps.app.goo.gl/dBucx2Z5Tv6mAqtd9" target="_blank" class="btn bg" style="border-radius:8px">📍 ABRIR EN GOOGLE MAPS</a>
+<div style="margin-top:20px;color:#999;font-size:12px">Entrada principal → Pasillo central → Local 1-96</div>
+</div>
 </div></div></section>
 
 <footer>
@@ -275,5 +308,120 @@ document.querySelectorAll('.nk a[href^="#"]').forEach(a=>{a.addEventListener('cl
 const pc=document.getElementById('particles');for(let i=0;i<25;i++){const p=document.createElement('div');p.className='pt';p.style.left=Math.random()*100+'%';p.style.animationDuration=(8+Math.random()*12)+'s';p.style.animationDelay=Math.random()*10+'s';p.style.width=p.style.height=(1+Math.random()*2)+'px';pc.appendChild(p);}
 function fC(c,b){document.querySelectorAll('.cb').forEach(x=>x.classList.remove('ac'));b.classList.add('ac');document.querySelectorAll('.pc').forEach(x=>{x.style.display=(c==='all'||x.dataset.cat===c)?'':'none'});}
 function cot(n,p){window.open('https://wa.me/573015131733?text='+encodeURIComponent('Hola Padrino! Me interesa: '+n+' ($'+p+'). ¿Disponible?'),'_blank');}
+
+// ============================================================
+// NEWS FEED — Auto-updating gaming news
+// ============================================================
+let allNews=[];
+let newsPage=0;
+const NEWS_PER_PAGE=6;
+
+async function loadNews(cat,btn){
+  if(btn){document.querySelectorAll('#blog .cb').forEach(x=>x.classList.remove('ac'));btn.classList.add('ac');}
+  const grid=document.getElementById('newsGrid');
+  grid.innerHTML='<div class="bl"><div class="bl-img">⏳</div><div class="bl-b"><div class="bl-t">Cargando noticias...</div></div></div>';
+  
+  try{
+    // RSS feeds via rss2json API (free)
+    const feeds=[
+      'https://api.rss2json.com/v1/api.json?rss_url=https://www.3djuegos.com/rss/noticias.xml',
+      'https://api.rss2json.com/v1/api.json?rss_url=https://vandal.elespanol.com/xml.cgi',
+      'https://api.rss2json.com/v1/api.json?rss_url=https://www.vidaextra.com/index.xml'
+    ];
+    
+    allNews=[];
+    for(const url of feeds){
+      try{
+        const r=await fetch(url);
+        const j=await r.json();
+        if(j.items){
+          j.items.forEach(item=>{
+            const title=(item.title||'').toLowerCase();
+            let tag='Gaming';
+            if(/playstation|ps5|ps4|sony|dualsense/i.test(title))tag='PlayStation';
+            else if(/xbox|microsoft|game pass|series [sx]/i.test(title))tag='Xbox';
+            else if(/nintendo|switch|mario|zelda|pokemon/i.test(title))tag='Nintendo';
+            else if(/pc|steam|epic|nvidia|amd|gpu/i.test(title))tag='PC';
+            
+            allNews.push({
+              title:item.title||'Sin título',
+              desc:(item.description||'').replace(/<[^>]*>/g,'').substring(0,150)+'...',
+              link:item.link||'#',
+              date:item.pubDate?new Date(item.pubDate).toLocaleDateString('es-CO',{day:'numeric',month:'short',year:'numeric'}):'',
+              tag,
+              source:item.author||(url.includes('3djuegos')?'3DJuegos':url.includes('vandal')?'Vandal':'VidaExtra'),
+              img:item.thumbnail||item.enclosure?.link||''
+            });
+          });
+        }
+      }catch(e){}
+    }
+    
+    // Filter
+    if(cat&&cat!=='all'){
+      const catMap={ps:'PlayStation',xbox:'Xbox',nintendo:'Nintendo',pc:'PC'};
+      allNews=allNews.filter(n=>n.tag===catMap[cat]);
+    }
+    
+    // Sort by date
+    allNews.sort((a,b)=>new Date(b.date)-new Date(a.date));
+    
+    newsPage=0;
+    renderNews();
+    
+  }catch(e){
+    grid.innerHTML=getFallbackNews();
+  }
+}
+
+function renderNews(){
+  const grid=document.getElementById('newsGrid');
+  const start=0;
+  const end=(newsPage+1)*NEWS_PER_PAGE;
+  const items=allNews.slice(start,end);
+  
+  if(!items.length){
+    grid.innerHTML=getFallbackNews();
+    document.getElementById('loadMoreBtn').style.display='none';
+    return;
+  }
+  
+  const tagColors={PlayStation:'#0070d1',Xbox:'#0e7a0d',Nintendo:'#e60012',PC:'#ff6600',Gaming:'#f5c518'};
+  
+  grid.innerHTML=items.map(n=>{
+    const color=tagColors[n.tag]||'#f5c518';
+    const icons={PlayStation:'🎮',Xbox:'🟢',Nintendo:'🔴',PC:'💻',Gaming:'🎯'};
+    const icon=icons[n.tag]||'🎯';
+    return `<a href="${n.link}" target="_blank" style="text-decoration:none;color:inherit" class="bl rv vs">
+      <div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f);position:relative">
+        ${n.img?`<img src="${n.img}" style="width:100%;height:100%;object-fit:cover;opacity:.6" onerror="this.style.display='none'">`:''}
+        <span style="position:absolute;font-size:48px;z-index:1">${icon}</span>
+      </div>
+      <div class="bl-b">
+        <div class="bl-tag" style="color:${color}">${n.tag}</div>
+        <div class="bl-t">${n.title}</div>
+        <div class="bl-e">${n.desc}</div>
+        <div class="bl-d">📅 ${n.date} · ${n.source}</div>
+      </div>
+    </a>`;
+  }).join('');
+  
+  document.getElementById('loadMoreBtn').style.display=end<allNews.length?'inline-flex':'none';
+}
+
+function loadMoreNews(){
+  newsPage++;
+  renderNews();
+}
+
+function getFallbackNews(){
+  return `
+  <div class="bl rv vs" onclick="this.classList.toggle('open')"><div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f)">🎮</div><div class="bl-b"><div class="bl-tag" style="color:#0070d1">PlayStation</div><div class="bl-t">PS5 Pro — Todo lo que sabemos</div><div class="bl-e">Sony prepara la versión más potente de PlayStation 5.</div><div class="bl-full">La PS5 Pro llegará con GPU mejorada, ray tracing avanzado y soporte para 8K. Se espera un aumento significativo en rendimiento para juegos de última generación. En El Padrino Gamer seremos los primeros en tenerla disponible en Cali.</div><span class="bl-more">► Leer más</span></div></div>
+  <div class="bl rv vs" onclick="this.classList.toggle('open')"><div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f)">🟢</div><div class="bl-b"><div class="bl-tag" style="color:#0e7a0d">Xbox</div><div class="bl-t">Game Pass sube de precio en 2026</div><div class="bl-e">Microsoft anuncia cambios en sus planes de suscripción.</div><div class="bl-full">Xbox Game Pass Ultimate ahora incluye acceso a EA Play y Ubisoft+, pero el precio sube. La versión estándar se mantiene. Si tienes Xbox Series S o X, el Game Pass sigue siendo la mejor opción calidad-precio para jugar.</div><span class="bl-more">► Leer más</span></div></div>
+  <div class="bl rv vs" onclick="this.classList.toggle('open')"><div class="bl-img" style="background:linear-gradient(135deg,#1a0a2e,#0d0a1f)">🔴</div><div class="bl-b"><div class="bl-tag" style="color:#e60012">Nintendo</div><div class="bl-t">Nintendo Switch 2 — Fecha confirmada</div><div class="bl-e">La nueva generación de Nintendo llega este año.</div><div class="bl-full">Nintendo Switch 2 llega con pantalla OLED de 8 pulgadas, procesador NVIDIA de última generación, retrocompatibilidad y Joy-Con magnéticos. En El Padrino Gamer la tendremos disponible. ¡Pregunta por la preventa!</div><span class="bl-more">► Leer más</span></div></div>`;
+}
+
+// Load news on page load
+setTimeout(()=>loadNews('all'),3000);
 </script>
 </body></html>
